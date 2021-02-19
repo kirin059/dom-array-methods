@@ -1,9 +1,11 @@
-const main = document.getElementById("main");
-const addUserBtn = document.getElementById("add-user");
-const doubleBtn = document.getElementById("double");
-const showMillionairesBtn = document.getElementById("show-millionaires");
-const sortBtn = document.getElementById("sort");
-const calculateWealthBtn = document.getElementById("calculate-wealth");
+const main = document.querySelector("#main"); // 오른쪽 Person / Wealth
+
+// 버튼
+const addUserBtn = document.querySelector("#add_user");
+const doubleBtn = document.querySelector("#double");
+const showMillionairesBtn = document.querySelector("#show_millionaires");
+const sortBtn = document.querySelector("#sort");
+const calculateWealthBtn = document.querySelector("#calculate_wealth");
 
 let data = [];
 
@@ -11,12 +13,12 @@ getRandomUser();
 getRandomUser();
 getRandomUser();
 
-// Fetch random user and add money
+// Fetch함수 사용  >>  random user and add money
 async function getRandomUser() {
-    const res = await fetch("https://randomuser.me/api");
-    const data = await res.json();
+    const res = await fetch("https://randomuser.me/api"); // fetch함수를 res에 담아주기
+    const data = await res.json(); // res(fetch함수가 담긴 변수)를 json으로 풀어주기(해석)
 
-    const user = data.results[0];
+    const user = data.results[0]; // fetch함수 내 result에서 0번째 데이터 가져오기  >> user에 값 담기
 
     const newUser = {
         name: `${user.name.first} ${user.name.last}`,
