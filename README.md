@@ -1,4 +1,4 @@
-# dom-array-methodsr 만들기 (1)
+# dom-array-methods 만들기 (1)
 ## html, javascript
 ![image](https://user-images.githubusercontent.com/71425369/108598003-5962be00-73cf-11eb-8be6-b249b971ca57.png)
 
